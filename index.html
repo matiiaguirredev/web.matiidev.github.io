@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/2023041ds1_165938.jpg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="/styles/styles.css">
+  
+  <title>Matias Aguirre</title>
+
+</head>
+
+<body>
+  
+  <!-- <img class="img-fondo" src="/img/lenguaje-programacion 1.png" alt="img-fondo"> -->
+  
+  <div class="menu">
+    <div class="">
+      <img class="logo"  src="/img/giphy-2--unscreen.gif" alt="logo">
+    </div>
+    <div class="nav-bar">
+      <ul  type="none">
+        <li><a href="#sobre-mi">Sobre Mi</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#educacion">Educación</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <div class="icon">
+        <a href=""><i class="bi bi-moon-fill"></a></i>
+        <a href=""><i class="bi bi-globe"></a></i>
+      </div>
+    </div>
+  </div>
+
+<div class="section">
+  <div class="info-inicio">
+    <h1 class="animated-text"></h1>
+    <!-- <h3 class="animated-text2">Desarrollador Web Full Stack</h3> -->
+    <a href="/CV-Matias-Aguirre.pdf" download="CV-Matias-Aguirre">
+      <button type="button">Descarga mi CV</button>
+    </a>
+  </div>
+  <div class="foto-inicio">
+    <img class="info-foto" src="/img/1681230824230 1.png" alt="">
+  </div>
+</div>
+
+<div class="section2">
+  <!-- <img id="sobre-mi" class="img-sobre-mi" src="/img/programacion-2-e1551291144973 2.png" alt=""> -->
+  <div class="">
+    <h3 id="sobre-mi" class="h3h3-sobremi">let SobreMi = </h3>
+    <p class="p-sobremi">🚀 Apasionado por el desarrollo Web, actualmente me encuentro en las primeras etapas de mi carrera como desarrollador Full Stack 💻. Comprometido con el aprendizaje continuo y la adaptabilidad para mantenerme al día en este campo en constante evolución. Estoy ansioso por enfrentar nuevos desafíos y oportunidades que me permitan crecer y desarrollar mis habilidades en un entorno profesional. Mi objetivo es contribuir de manera significativa al equipo, aportando mi entusiasmo, dedicación y esfuerzo.</p>
+  </div>
+  <h3 id="simpleUsage" class="h3-mivida"></h3>
+
+  
+<!--   <div class="slider">
+    <div class="slides" id="slides">
+      <div class="slide"><img src="/img/1.jpeg" alt="Image 1"></div>
+      <div class="slide"><img src="/img/2.jpeg" alt="Image 2"></div>
+      <div class="slide"><img src="/img/3.jpeg" alt="Image 3"></div>
+      <div class="slide"><img src="/img/4.jpeg" alt="Image 4"></div>
+      <div class="slide"><img src="/img/5.jpeg" alt="Image 5"></div>
+    </div>
+    
+    <div class="arrow prev" onclick="changeSlide(-1)">
+        <i class="bi bi-arrow-left-circle-fill"></i>
+    </div>
+    <div class="arrow next" onclick="changeSlide(1)">
+        <i class="bi bi-arrow-right-circle-fill"></i>
+    </div>
+  </div> -->
+
+  <div class="gallery">
+    <div class="gallery-container">
+      <img class="gallery-item gallery-item-1" src="/img/1.jpeg" data-index="1" onclick="openOverlay(this.src)">
+      <img class="gallery-item gallery-item-2" src="/img/2.jpeg" data-index="2" onclick="openOverlay(this.src)">
+      <img class="gallery-item gallery-item-3" src="/img/3.jpeg" data-index="3" onclick="openOverlay(this.src)">
+      <img class="gallery-item gallery-item-4" src="/img/4.jpeg" data-index="4" onclick="openOverlay(this.src)">
+      <img class="gallery-item gallery-item-5" src="/img/5.jpeg" data-index="5" onclick="openOverlay(this.src)">
+    </div>
+    <!-- <div class="gallery-controls"></div>  los comento al momento, si los necesito, hay que volver a descomentarlos de js tmb.-->
+  </div>
+
+  <div class="lightbox-container" style="display: none;">
+    <img class="lightbox-image" src="" alt="Large Image">
+    <button class="close-lightbox">X</button>
+  </div>
+  
+</div>
+
+
+<div class="section3">
+
+  <h3 id="habilidades" class="habilidades">const Habilidades =</h3>
+
+  <div id="carousel-container">
+    <div id="image-carousel"></div>
+    <button id="prev-btn" onclick="prevSlide()"><i class="bi bi-arrow-left"></i></button>
+    <button id="next-btn" onclick="nextSlide()"><i class="bi bi-arrow-right"></i></i></button>
+  </div>
+
+  <div class="img-habilidades">
+    <a id="id-habilidad" class="id-habilidad"><img src="/img/bootstrap.png" alt=""></a>
+    <a id="id-habilidad" class="id-habilidad"><img src="/img/github.png" alt=""></a>
+    <a id="id-habilidad" class="id-habilidad"><img src="/img/mysql.png" alt=""></a>
+    <a id="id-habilidad" class="id-habilidad"><img src="/img/python.png" alt=""></a>
+    <a id="id-habilidad" class="id-habilidad"><img src="/img/laravel.png" alt=""></a>
+    <a id="id-habilidad" class="id-habilidad"><img src="/img/php.png" alt=""></a>
+    <a id="id-habilidad" class="id-habilidad"><img src="/img/html.png" alt=""></a>
+    <a id="id-habilidad" class="id-habilidad"><img src="/img/css.png" alt=""></a>
+    <a id="id-habilidad" class="id-habilidad"><img src="/img/javascript.png" alt=""></a>
+    <a id="id-habilidad" class="id-habilidad"><img src="/img/sass.png" alt=""></a>
+    <a id="id-habilidad" class="id-habilidad"><img src="/img/react.png" alt=""></a>
+    <a id="id-habilidad" class="id-habilidad"><img src="/img/figma.png" alt=""></a>
+  </div>
+
+</div>
+
+<div class="section4">
+
+  <h3 id="educacion" class="educacion">const Educacion =</h3>
+
+  <div class="grid-container">
+    <div class="grid-item item1">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam ad corporis eius commodi, totam ab maiordolor sit amet consectetur adipisicing elit. Magnam ad corporis es asperiores iat reprehenderit.</p>
+      <img src="/img/udemy.png" alt="">
+    </div>
+    <div class="grid-item item2">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam addolor sit amet consectedolor sit amet consectetur adipisicing elit. Magnam ad corporis dolor sit amet consectetur adipisicing elit. Magnam ad corporis dolor sit amet consectetur adipisicing elit. Magnam ad corporis dolor sit amet consectetur adipisicing elit. Magnam ad corporis dolor sit amet consectetur adipisicing elit. Magnam ad corporis tur adipisicing elit. Magnam ad corporis dolor sit amet consectetur adipisicing elit. Magnam ad corporis  corporis eius commodi, totam ab maiores asperiores iat reprehenderit.</p>
+      <img src="/img/digital.png" alt="">
+    </div>
+    <div class="grid-item item3">
+      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam ad codolor sit amet consectetur adipisicing elit. Magnam ad corporis rdolor sit amet consectetur adipisicing elit. Magnam ad corporis poris eius commodi, totam ab maiores asperiores iat reprehenderit.</p>
+      <img src="/img/Open-Bootcamp 1.png" alt="">
+    </div>
+    <div class="grid-item item4">
+      <img class="interno1" src="/img/certificadodiplomatura.jpg" alt="">
+      <img class="interno2" src="/img/back.jpg" alt="">
+      <img class="interno3" src="/img/front.jpg" alt="">
+      <img class="interno3" src="/img/fundamentos.jpg" alt="">
+    </div>
+    
+    <div id="overlay">
+      <span id="close-btn" onclick="closeOverlay()">&times;</span>
+      <img id="overlay-img" src="" alt="">
+    </div>
+  </div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/typeit@8.8.0/dist/index.umd.js"></script>
+<script src="/js/index.js"></script>
+</body>
+</html>
