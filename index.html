@@ -58,7 +58,8 @@
   <h3 id="simpleUsage" class="h3-mivida"></h3>
 
   
-<!--   <div class="slider">
+<!--   eslaider que al final no sirvio, pero lo dejamos por las dudas, css comentado y js
+  <div class="slider">
     <div class="slides" id="slides">
       <div class="slide"><img src="/img/1.jpeg" alt="Image 1"></div>
       <div class="slide"><img src="/img/2.jpeg" alt="Image 2"></div>
@@ -76,6 +77,7 @@
   </div> -->
 
   <div class="gallery">
+
     <div class="gallery-container">
       <img class="gallery-item gallery-item-1" src="/img/1.jpeg" data-index="1" onclick="openOverlay(this.src)">
       <img class="gallery-item gallery-item-2" src="/img/2.jpeg" data-index="2" onclick="openOverlay(this.src)">
@@ -86,10 +88,10 @@
     <!-- <div class="gallery-controls"></div>  los comento al momento, si los necesito, hay que volver a descomentarlos de js tmb.-->
   </div>
 
-  <div class="lightbox-container" style="display: none;">
+<!-- NO LO USO AL FINAL POR QUE FUNCIONA EL OVER DE MAS ABAJO, ESTE NO FUNCIONABA EL CLICK FUERA DE LA FOTO PARA CERRAR, EL JS TMB ESTA COMENTADO  <div class="lightbox-container" style="display: none;">
     <img class="lightbox-image" src="" alt="Large Image">
     <button class="close-lightbox">X</button>
-  </div>
+  </div> -->
   
 </div>
 
@@ -98,7 +100,7 @@
 
   <h3 id="habilidades" class="habilidades">const Habilidades =</h3>
 
-  <div id="carousel-container">
+  <div id="carousel-container"> <!-- las imagenes las cargue por js al final -->
     <div id="image-carousel"></div>
     <button id="prev-btn" onclick="prevSlide()"><i class="bi bi-arrow-left"></i></button>
     <button id="next-btn" onclick="nextSlide()"><i class="bi bi-arrow-right"></i></i></button>
@@ -125,7 +127,7 @@
 
   <h3 id="educacion" class="educacion">const Educacion =</h3>
 
-  <div class="grid-container">
+  <div class="grid-container" id="grid-carousel">
     <div class="grid-item item1">
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam ad corporis eius commodi, totam ab maiordolor sit amet consectetur adipisicing elit. Magnam ad corporis es asperiores iat reprehenderit.</p>
       <img src="/img/udemy.png" alt="">

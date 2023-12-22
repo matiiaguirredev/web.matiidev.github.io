@@ -112,24 +112,6 @@ const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryCont
 /* exampleCarousel.setControls(); */ // estos son los botones, por el momentos los elimino.
 exampleCarousel.startRotation(5000); // Cambia el intervalo a tu preferencia (en milisegundos)
 
-/* ////////////////////////////////////////////////// */
-/* CARRUSEL DE HABILIDADES */
-/* const imgHabilidades = document.querySelector('.img-habilidades');
-
-function rotateSlider() {
-    const firstItem = document.querySelector('.id-habilidad');
-    imgHabilidades.appendChild(firstItem);
-    setTimeout(() => {
-        imgHabilidades.style.transition = 'none';
-        setTimeout(() => {
-            imgHabilidades.style.transition = 'transform .3 infinite linear, opacity .3 infinite linear'; //Añade la transición de opacidad 
-            imgHabilidades.style.opacity = 1; // Establece la opacidad a 1 después de la transición
-        });
-    }, 3000);
-}
-
-setInterval(rotateSlider, 3000); */
-
 /* /////////////////////////////////////////////////////////////////////// */
 
 const images = [
@@ -220,7 +202,7 @@ imageCarousel.addEventListener('mouseleave', startInterval);
 
 
 
-/* ////////////////// img educacion ////////////////// */
+/* ////////////////// abre en grande las img sobremi/educacion ////////////////// */
 
 const overlay = document.getElementById('overlay');
 const overlayImg = document.getElementById('overlay-img');
@@ -245,3 +227,65 @@ document.addEventListener('click', function (event) {
     }
 
 });
+
+
+/* //////////         CARRUSEL DE EDUCACION                ////////////// */
+
+function rotateCarousel() {
+    const carousel = document.getElementById('grid-carousel');
+    const item1 = carousel.querySelector('.item1');
+    const item2 = carousel.querySelector('.item2');
+    const item3 = carousel.querySelector('.item3');
+    
+    // Agregar clase para ocultar con transición
+    item1.classList.add('hidden');
+    item2.classList.add('hidden');
+    item3.classList.add('hidden');
+
+
+    // Guardar el contenido del último elemento
+    const lastItemContent = item3.innerHTML;
+
+    // Mover contenido de item2 a item3
+    item3.innerHTML = item2.innerHTML;
+
+    // Mover contenido de item1 a item2
+    item2.innerHTML = item1.innerHTML;
+
+    // Colocar el contenido guardado en item1
+    item1.innerHTML = lastItemContent;
+
+    // Eliminar clase después de la transición de la animación
+    item1.addEventListener('transitionend', function() {
+        item1.classList.remove('hidden');
+        item2.classList.remove('hidden');
+        item3.classList.remove('hidden');
+
+    }, { once: true });
+}
+
+// Establece un intervalo para rotar el carrusel cada 3 segundos (3000 milisegundos)
+setInterval(rotateCarousel, 5000);
+
+
+/* ////////////////////////////////////////////////// */
+/* CARRUSEL DE HABILIDADES */
+
+
+const gridItem = document.querySelector('.grid-item.item4');
+const internos = gridItem.querySelectorAll('img');
+
+function rotateSlider() {
+    const firstInterno = gridItem.querySelector('.interno1');
+    gridItem.appendChild(firstInterno);
+
+    setTimeout(() => {
+        gridItem.style.transition = 'none';
+        setTimeout(() => {
+            gridItem.style.transition = 'transform 0.3s linear, opacity 0.3s linear'; // Ajusta la duración de la transición según sea necesario
+            gridItem.style.opacity = 1;
+        });
+    }, 1500);
+}
+
+setInterval(rotateSlider, 1500);
