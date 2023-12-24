@@ -4,6 +4,11 @@
     margin: 0;
 }
 
+
+.menu-responsive {
+    display: none;
+}
+
 .img-fondo{
     position: absolute;
     width: 100%;
@@ -82,9 +87,10 @@ ul {
     padding-bottom: 10%;
     background-image: url("/img/lenguaje-programacion\ 1.png");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
     margin-bottom: 5%;
     border-radius: 20px;
+    max-width: 100%;
 
 }
 
@@ -265,7 +271,7 @@ h1.animated-text {
     opacity: 0;
     position: absolute;
     transition: all 0.3s ease-in-out;
-    width: 330px;
+    max-width: 330px;
     z-index: 0;
     border-radius: 15px;
     background-size: contain;
@@ -462,7 +468,7 @@ h1.animated-text {
 }
 
 #carousel-container {
-    width: 100%;
+    max-width: 100%;
     overflow: hidden;
     text-align: center;
     margin: 0;
@@ -475,6 +481,7 @@ h1.animated-text {
     transition: transform 0.5s ease-in-out;
     justify-content: center;
     padding: 0 0 2.5rem 0;
+    max-width: 100%;
     
 }
 
@@ -511,7 +518,7 @@ h1.animated-text {
 
 #prev-btn, #next-btn {
     cursor: pointer;
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: black;
     background-color: transparent;
     padding: 10px;
@@ -601,6 +608,7 @@ img.id-habiL {
 .section4{
     margin: 0;
     padding: 2rem 0 0 0;
+    max-width: 100%;
 }
 
 .educacion {
@@ -764,6 +772,7 @@ img.id-habiL {
 .section5{
     display: flex;
     flex-direction: column;
+    max-width: 100%;
 }
 
 .proyectos {
@@ -781,12 +790,14 @@ img.id-habiL {
 .grid-proyectos {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr); /* Definir dos filas con altura flexible */
+    grid-auto-rows: 1fr; /* Altura automática para las filas adicionales */
     width: 100%;
     gap: 1rem;
     align-items: center;
-    padding: 0 5rem;
-
+    padding: 0 2rem;
 }
+
 
 .grid-proyectos img{
     width: 100%;
@@ -856,6 +867,7 @@ img.id-habiL {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
+    max-width: 100%;
 }
 
 .container {
@@ -1048,7 +1060,7 @@ form > button:hover,
     gap: 2rem;
 }
 
-/* ul a {
+.proy-media-query ul a {
     background: linear-gradient(to right,#d5d4da);
     box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
     padding: .50rem .50rem;
@@ -1058,15 +1070,51 @@ form > button:hover,
     transition: 1s linear;
 }
 
-ul a:hover{
+.proy-media-query ul a:hover{
     cursor: pointer;
     background: #5b53539c;
 
 }
- */
 
-@media screen and (max-width: 900px){
-    html {
+.grid-proyectos h4{
+    padding: 2rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+/* /////////////MEDIAQUERYS///////////// */
+@media screen and (max-width: 1500px) {
+
+    .menu {
+        display: flex;
+    }
+
+    ul {
+        gap:0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 100%;
+        gap: 2rem;
+    }
+
+    .grid-container{
+        padding: 0;
+    }
+
+    .grid-container .fondo-educacion{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media screen and (max-width: 1250px){
+    * {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
@@ -1077,12 +1125,12 @@ ul a:hover{
     }
 
     ul {
-        gap:0;
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: center;
         position: absolute;
         width: 100%;
+        gap: 2rem;
     }
 
     .h3h3-sobremi{
@@ -1146,6 +1194,7 @@ ul a:hover{
 
     .section3 {
         background-image: none;
+        max-width: 100%;
     }
 
     .educacion{
@@ -1161,6 +1210,7 @@ ul a:hover{
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
+        padding: 0 1rem;
         
     }
 
@@ -1292,5 +1342,232 @@ ul a:hover{
         color: black;
     }
 
+    .grid-prueba h4{
+        padding: 1.5rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .grid-prueba p{
+        padding: 0rem 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+}
+
+@media screen and (max-width:650px) {
+    .menu {
+        display: none;
+    }
+
+    .menu-responsive {
+        display: block;
+    }
+
+    .menu-responsive i{
+        position: absolute;
+        font-size: 2rem;
+        z-index: 15;
+        transition: .5s ease-in-out;
+        padding: 0;
+        left: 3%;
+        top: 1%;
+    }
+
+    .menu-responsive i:hover{
+    
+    }
+
+    .info-inicio {
+        padding: 0 0;
+
+    }
+    
+    .info-inicio h1 {
+        font-size: 1.5rem;
+        margin: 0 0 .5 0;
+    }
+
+    .info-inicio button {
+        font-size: .75rem;
+        padding: .25rem .50rem;
+
+    }
+    
+    .foto-inicio {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 0;
+
+    }
+
+    img.info-foto {
+        max-width: 65%;
+
+    }
+
+    .section {
+        margin-bottom: 1rem;
+    }
+
+    .h3h3-sobremi {
+        width: 90%;
+        display: flex;
+        padding: 0;
+        margin: 0;
+        font-size: 1.75rem;
+    }
+
+    .sobremi-responsive {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .p-sobremi {
+        font-size: 1.2rem;
+    }
+
+    .h3-mivida{
+        padding: 0;
+        font-size: 1.5rem;
+    }
+
+    .section3 {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .habilidades {
+        margin: 0;
+        padding: 0;
+        width: 90%;
+        font-size: 1.75rem;
+
+    }
+
+    #image-carousel img {
+        width: 35%;
+    }
+
+    #prev-btn, #next-btn {
+        display: inline-block;
+    }
+
+    .img-habilidades {
+        display: flex;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding: .75rem 0;
+        gap: 1.2rem;
+    }
+    
+    .id-habilidad img {
+        width: 1.5rem;
+        height: auto;
+        display: inline-block;
+    }
+
+    .section4{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .educacion {
+        margin: 0;
+        padding: 0;
+        width: 90%;
+        font-size: 1.75rem;
+        
+    }
+
+    .grid-container {
+        padding: 3rem 1rem;
+    }
+
+    .grid-item p {
+        font-size: 1rem;
+
+    }
+
+    .grid-container .item4 {
+        padding: 0;
+    }
+
+    .section5{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .proyectos {
+        padding: 0;
+        margin: 0;
+        width: 90%;
+        font-size: 1.75rem;
+        
+    }
+
+    .grid-prueba {
+        padding: 3rem 2rem 0 2rem;
+    }
+
+    
+    .proy-media-query {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .h4-proy {
+        font-size: 1.2rem;
+        padding: 0 0 1rem 0;
+    }
+
+    .proy-media-query ul{
+        padding: 0;
+        margin: 0;
+    }
+    
+    ul.proy-media{
+        display: flex;
+        position: relative;
+
+    }
+
+    .section6 {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .section6 .container {
+        padding: 0;
+    }
+
+    .box-info {
+        padding-top: 2rem;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .container form{
+        padding: 3rem 0;
+        width: 80%;
+    }
 
 }
