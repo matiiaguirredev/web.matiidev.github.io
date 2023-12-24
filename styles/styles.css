@@ -1030,12 +1030,14 @@ form > button:hover,
 .grid-prueba {
     display: none;
 }
+
 .h4-proy {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     font-size: 2rem;
+    padding-bottom: 2rem;
 
 }
 .proy-media{
@@ -1046,11 +1048,22 @@ form > button:hover,
     gap: 2rem;
 }
 
-ul a {
+/* ul a {
+    background: linear-gradient(to right,#d5d4da);
+    box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
+    padding: .50rem .50rem;
+    border-radius: 2rem;
     text-decoration: none;
     color: black;
+    transition: 1s linear;
 }
 
+ul a:hover{
+    cursor: pointer;
+    background: #5b53539c;
+
+}
+ */
 
 @media screen and (max-width: 900px){
     html {
