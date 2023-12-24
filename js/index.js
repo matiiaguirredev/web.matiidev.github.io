@@ -30,6 +30,13 @@ new TypeIt("#simpleUsage", {
     loop: true
 }).go();
 
+new TypeIt("#h4masproy", {
+    strings: "Algunos proyectos mas ! ...",
+    speed: 100,
+    waitUntilVisible: true,
+    loop: true
+}).go();
+
 
 // Abrir lightbox al hacer clic en una imagen del slider
 //no funcionaba al dar click fuera de la pantalla asique utilice la de overlay mas abajo.
@@ -52,7 +59,8 @@ closeLightboxButton.addEventListener('click', () => {
 });
  */
 
-/* gallery */
+
+/*//////////////// carrusel gallery ////////////////*/
 
 const galleryContainer = document.querySelector(".gallery-container");
 const galleryControlsContainer = document.querySelector(".gallery-controls");
@@ -112,7 +120,7 @@ const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryCont
 /* exampleCarousel.setControls(); */ // estos son los botones, por el momentos los elimino.
 exampleCarousel.startRotation(5000); // Cambia el intervalo a tu preferencia (en milisegundos)
 
-/* /////////////////////////////////////////////////////////////////////// */
+/* ///////////////////// CARRUSEL DE HABILIDADES ! //////////////////////// */
 
 const images = [
     '/img/php.png',
@@ -220,7 +228,8 @@ function closeOverlay() {
 document.addEventListener('click', function (event) {
     if (event.target.classList.contains('interno1') ||
         event.target.classList.contains('interno2') ||
-        event.target.classList.contains('interno3')) {
+        event.target.classList.contains('interno3') ||
+        event.target.classList.contains('interno4')) {
         openOverlay(event.target.src);
     } else if (event.target.id === 'overlay') {
         closeOverlay();
@@ -228,15 +237,21 @@ document.addEventListener('click', function (event) {
 
 });
 
+document.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+        closeOverlay();
+    }
+});
 
-/* //////////         CARRUSEL DE EDUCACION                ////////////// */
+/* //////////  CARRUSEL DE EDUCACION    ////////////// */
 
 function rotateCarousel() {
     const carousel = document.getElementById('grid-carousel');
     const item1 = carousel.querySelector('.item1');
     const item2 = carousel.querySelector('.item2');
     const item3 = carousel.querySelector('.item3');
-    
+
+
     // Agregar clase para ocultar con transición
     item1.classList.add('hidden');
     item2.classList.add('hidden');
@@ -255,6 +270,7 @@ function rotateCarousel() {
     // Colocar el contenido guardado en item1
     item1.innerHTML = lastItemContent;
 
+
     // Eliminar clase después de la transición de la animación
     item1.addEventListener('transitionend', function() {
         item1.classList.remove('hidden');
@@ -262,30 +278,53 @@ function rotateCarousel() {
         item3.classList.remove('hidden');
 
     }, { once: true });
-}
 
-// Establece un intervalo para rotar el carrusel cada 3 segundos (3000 milisegundos)
-setInterval(rotateCarousel, 5000);
+}
+/* setInterval(rotateCarousel, 7500); */
 
 
 /* ////////////////////////////////////////////////// */
-/* CARRUSEL DE HABILIDADES */
+/* CARRUSEL DE titulos  funciona perfecto pero es demaciada rotacion ya, molesta a la vista incluso*/
 
+/* function rotateCarouselInternos() {
+    const carouselInternos = document.getElementById('internos');
+    const interno1 = carouselInternos.querySelector('.interno1');
+    const interno2 = carouselInternos.querySelector('.interno2');
+    const interno3 = carouselInternos.querySelector('.interno3');
+    const interno4 = carouselInternos.querySelector('.interno4');
 
-const gridItem = document.querySelector('.grid-item.item4');
-const internos = gridItem.querySelectorAll('img');
+    // Agregar clase para ocultar con transición
+    interno1.classList.add('hidden');
+    interno2.classList.add('hidden');
+    interno3.classList.add('hidden');
+    interno4.classList.add('hidden');
 
-function rotateSlider() {
-    const firstInterno = gridItem.querySelector('.interno1');
-    gridItem.appendChild(firstInterno);
+    // Guardar el contenido del último elemento
+    const lastInternoContent = interno4.src;
 
-    setTimeout(() => {
-        gridItem.style.transition = 'none';
-        setTimeout(() => {
-            gridItem.style.transition = 'transform 0.3s linear, opacity 0.3s linear'; // Ajusta la duración de la transición según sea necesario
-            gridItem.style.opacity = 1;
-        });
-    }, 1500);
+    // Mover contenido de interno2 a interno3
+    interno4.src = interno3.src;
+
+    // Mover contenido de interno1 a interno2
+    interno3.src = interno2.src;
+
+    // Mover contenido de interno0 a interno1
+    interno2.src = interno1.src;
+
+    // Colocar el contenido guardado en interno0
+    interno1.src = lastInternoContent;
+
+    // Eliminar clase después de la transición de la animación
+    interno1.addEventListener('transitionend', function() {
+        interno1.classList.remove('hidden');
+        interno2.classList.remove('hidden');
+        interno3.classList.remove('hidden');
+        interno4.classList.remove('hidden');
+
+    }, { once: true });
 }
+setInterval(rotateCarouselInternos, 3500);
+ */
 
-setInterval(rotateSlider, 1500);
+
+/* ////////////////////////////////////////////////// */
