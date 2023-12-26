@@ -129,7 +129,6 @@ ul {
     justify-content:flex-start;
     align-items: center;
     width: 50%;
-    z-index: 1000;
     padding-left: 5rem;
 }
 
