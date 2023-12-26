@@ -2,29 +2,29 @@ new TypeIt('.animated-text', {
     speed: 65,
     loop: true
 })
-    .type("Hola!👋 Soy Matias Aguirre, <em>Desarrollador Web Full-Stack.</em>", { delay: 500 })
+    .type("Hola!👋 Soy Matias Aguirre, Desarrollador Web Full-Stack.", { delay: 500 })
     .move(1, { delay: 500 })
     .delete(70, { pause: 500 })
-    .type("<em>Developer.</em> ", { delay: 750 })
+    .type("Developer. ", { delay: 750 })
     .delete(15, { pause: 750 })
-    .type("<em>BackEnd. </em>", { delay: 750 })
+    .type("BackEnd. ", { delay: 750 })
     .delete(10, { pause: 750 })
-    .type("<em>FrontEnd. </em>", { delay: 750 })
+    .type("FrontEnd. ", { delay: 750 })
     .delete(10, { pause: 750 })
-    .type("<em>Full-Stack. </em>", { delay: 750 })
+    .type("Full-Stack. ", { delay: 750 })
     .delete(60, { pause: 750 })
     .move(null, { to: 'end' })
     .move(null, { speed: 30, to: 'start', instant: true })
-    .type("<em>Bienvenido</em>", { delay: 750 })
+    .type("Bienvenido</em>", { delay: 750 })
     .delete(1, { delay: 750 })
-    .type("<em>a</em>", { delay: 750 })
+    .type("a", { delay: 750 })
     .delete(1, { delay: 750 })
-    .type('<em>os<em>.', { delay: 750 })
+    .type('os.', { delay: 750 })
     .move(null, { delay: 500, to: 'end', instant: true })
     .go();
 
 new TypeIt("#simpleUsage", {
-    strings: "<em>“Y aqui abajo, un poquito de mi vida ...”</em>",
+    strings: "“Y aqui abajo, un poquito de mi vida ...”",
     speed: 50,
     waitUntilVisible: true,
     loop: true
