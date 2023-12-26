@@ -22,6 +22,11 @@
     border-radius: 5px;
 }
 
+.dark-mode .menu {
+    background: black;
+}
+
+
 .dark-mode .nav-bar ul li a:visited {
     color: white;
 
@@ -45,7 +50,6 @@
 .menu {
     display: flex;
     justify-content: space-between;
-    background-color: transparent;
     align-items: center;
     text-align: center;
     border-bottom: 3px solid #bbb;
@@ -53,6 +57,8 @@
     border-bottom-left-radius: 20px;
     width: 100%;
     flex-wrap: wrap;
+    background: white;
+    z-index: 10;
 
 }
 
@@ -115,12 +121,20 @@ ul {
     padding-top: 10%;
     flex-wrap: wrap;
     padding-bottom: 10%;
-    background-image: url("/img/15616101.png");
+    /* background-image: url("/img/15616101.png");
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 100%; */
     margin-bottom: 5%;
     border-radius: 20px;
     max-width: 100%;
+
+}
+
+.foto-fondo {
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    
 
 }
 
@@ -169,6 +183,10 @@ img.info-foto{
     font-size: 1.2rem;
     border: none;
     box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
+}
+
+.section2 {
+    padding-top: 10%;
 }
 
 .img-sobre-mi{
@@ -1164,6 +1182,7 @@ form > button:hover,
         gap: 2rem;
     }
 
+
     .h3h3-sobremi{
         width: 50%;
         justify-content: center;
@@ -1392,8 +1411,16 @@ form > button:hover,
 
 }
 
-@media screen and (max-width:680px) {
+@media screen and (max-width:700px) {
 
+    .foto-fondo {
+        height: 65%;
+        object-fit: cover;
+    }
+
+    .section2 {
+        padding-top: 20%;
+    }
 
     .open-menu {
         border: none;
@@ -1673,9 +1700,21 @@ form > button:hover,
 
 @media screen and (max-width:450px){
 
-    .section{
-        padding: 10rem 0;
+    .section {
+        padding-top: 25%;
     }
+
+    .foto-fondo {
+        height: 55%;
+        object-fit: cover;
+
+    }
+
+    .section2{
+        padding-top: 40%;
+    }
+
+    
 
     #image-carousel img{
         max-width: 25%;
