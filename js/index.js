@@ -2,7 +2,7 @@ new TypeIt('.animated-text', {
     speed: 65,
     loop: true
 })
-    .type("Hola!👋 Soy Matias Aguirre. <em>Desarrollador Web Full-Stack</em>", { delay: 500 })
+    .type("Hola!👋 Soy Matias Aguirre, <em>Desarrollador Web Full-Stack.</em>", { delay: 500 })
     .move(1, { delay: 500 })
     .delete(70, { pause: 500 })
     .type("<em>Developer.</em> ", { delay: 750 })
@@ -31,7 +31,7 @@ new TypeIt("#simpleUsage", {
 }).go();
 
 new TypeIt("#h4masproy", {
-    strings: "Algunos proyectos mas ! ...",
+    strings: "Algunos proyectos mas !",
     speed: 100,
     waitUntilVisible: true,
     loop: true
@@ -328,3 +328,30 @@ setInterval(rotateCarouselInternos, 3500);
 
 
 /* ////////////////////////////////////////////////// */
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const openMenu = document.getElementById('open-menu');
+    const aside = document.querySelector('aside');
+    const menuLinks = document.querySelectorAll('.menu-link');
+
+    openMenu.addEventListener('click', function() {
+        aside.classList.toggle('list-menu');
+    });
+
+    // Agregar event listener al documento para cerrar el menú al hacer clic fuera de él
+    document.addEventListener('click', function(event) {
+        if (!aside.contains(event.target) && !openMenu.contains(event.target)) {
+        // Si el clic no ocurrió dentro del menú ni en el botón de abrir, cierra el menú
+        aside.classList.remove('list-menu');
+        }
+    });
+
+    // Agregar event listener a cada enlace del menú para cerrar el menú al hacer clic en ellos
+    menuLinks.forEach(function (link) {
+        link.addEventListener('click', function() {
+        aside.classList.remove('list-menu');
+        });
+    });
+});
+

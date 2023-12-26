@@ -4,6 +4,9 @@
     margin: 0;
 }
 
+.list-menu{
+    display: none;
+}
 
 .menu-responsive {
     display: none;
@@ -271,7 +274,7 @@ h1.animated-text {
     opacity: 0;
     position: absolute;
     transition: all 0.3s ease-in-out;
-    max-width: 330px;
+    max-width: 50%;
     z-index: 0;
     border-radius: 15px;
     background-size: contain;
@@ -1087,6 +1090,10 @@ form > button:hover,
 }
 
 /* /////////////MEDIAQUERYS///////////// */
+/* /////////////MEDIAQUERYS///////////// */
+/* /////////////MEDIAQUERYS///////////// */
+
+
 @media screen and (max-width: 1500px) {
 
     .menu {
@@ -1315,7 +1322,7 @@ form > button:hover,
         grid-column: 2/3;
         grid-row: 3/5;
         right: 10%;
-        top: 7%;
+        top: 3.5%;
         position: relative;
     }
 
@@ -1343,7 +1350,8 @@ form > button:hover,
     }
 
     .grid-prueba h4{
-        padding: 1.5rem 0;
+        padding: 1.2rem 0;
+        margin: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1361,27 +1369,61 @@ form > button:hover,
 }
 
 @media screen and (max-width:650px) {
+
+    aside{
+        display: none;
+    }
+
+    .list-menu {
+        display: flex;
+
+    }
+
+    .list-menu ul{
+        position: fixed;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.846);
+        flex-direction: column;
+        padding: 50% 0 100% 0;
+        z-index: 5;
+
+    }
+    .list-menu ul a{
+        color: white;
+
+    }
+
+    .icon-responsive {
+        display: flex;
+        gap: 1rem;
+    }
+    .icon-responsive a {
+        color: white;
+    }
+
     .menu {
         display: none;
     }
 
     .menu-responsive {
-        display: block;
-    }
-
-    .menu-responsive i{
+        display: flex;
         position: absolute;
-        font-size: 2rem;
-        z-index: 15;
-        transition: .5s ease-in-out;
-        padding: 0;
-        left: 3%;
-        top: 1%;
     }
 
-    .menu-responsive i:hover{
-    
+    .menu-responsive button i{
+        position:fixed;
+        font-size: 3rem;
+        z-index: 101;
+        padding: 0;
+        left: 2%;
+        top: 1%;
+        color: black;
+        
     }
+
+    /* .menu-responsive i:hover{
+    
+    } */
 
     .info-inicio {
         padding: 0 0;
@@ -1413,6 +1455,7 @@ form > button:hover,
     }
 
     .section {
+        border-radius: 0;
         margin-bottom: 1rem;
     }
 
@@ -1570,4 +1613,88 @@ form > button:hover,
         width: 80%;
     }
 
+}
+
+@media screen and (max-width:550px) {
+    html{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+    .info-inicio h1{
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+
+    }
+
+    .section {
+        background-size: cover;
+        border-radius: 0;
+    }
+
+    #image-carousel img{
+        max-width: 25%;
+    }
+
+    .id-habilidad img{
+        max-width: 1.2rem;
+    }
+}
+
+@media screen and (max-width:450px){
+
+    .section{
+        padding: 10rem 0;
+    }
+
+    #image-carousel img{
+        max-width: 25%;
+    }
+
+    .id-habilidad img{
+        max-width: 1rem;
+    }
+
+    .info-inicio {
+        padding: 2rem .5rem;
+    }
+
+    .info-inicio h1 {
+        padding-bottom: 1.2rem;
+    }
+
+    .foto-inicio {
+        padding:  0 1rem;
+    }
+
+    .foto-inicio img {
+        min-width: 100%;
+    }
+
+    .h4-proy{ 
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+    }
+
+    .proy-media {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        gap: 1rem;
+    }
+
+}
+
+@media screen and (max-width:400px) {
+    .img-habilidades img {
+        width: .75rem;
+    }
+}
+
+@media screen and (max-width:365px){
+    .img-habilidades img {
+        width: .5rem;
+    }
 }
