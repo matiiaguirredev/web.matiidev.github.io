@@ -125,7 +125,6 @@ ul {
     background-repeat: no-repeat;
     background-size: 100%; */
     margin-bottom: 5%;
-    border-radius: 20px;
     max-width: 100%;
 
 }
@@ -134,6 +133,10 @@ ul {
     width: 100%;
     position: absolute;
     z-index: -1;
+    border-end-start-radius: 20px;
+    border-end-end-radius: 20px;
+
+
     
 
 }
@@ -905,11 +908,18 @@ img.id-habiL {
     margin-top: 5rem;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(rgba(0, 0, 0, 0.481),rgba(0, 0, 0, 0.177)),url("/img/fondocontacto.png");
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
     max-width: 100%;
+}
+
+.fondo-footer {
+    position: absolute;
+    z-index: -1;
+    opacity: .2;
+    width: 100%;
+}
+
+.text-center {
+    padding-top: 5%;
 }
 
 .container {
@@ -923,7 +933,7 @@ img.id-habiL {
 }
 
 .box-info {
-    color:#fff;
+    color:black;
     display:flex;
     flex-direction: column;
     gap:50px;
@@ -945,7 +955,7 @@ img.id-habiL {
 }
 
 .data > p > i {
-    color:crimson;
+    color:rgb(23, 22, 22);
     margin-right: 10px;
     font-size:25px;
 }
@@ -961,7 +971,7 @@ img.id-habiL {
     text-decoration: none;
     width: 40px;
     height: 40px;
-    background: crimson;
+    background: rgb(23, 22, 22);
     text-align: center;
     transition: .1s;
 }
@@ -998,7 +1008,7 @@ form {
 
 .input-box > input::placeholder,
 .input-box > textarea::placeholder {
-    color:#a3a3a3;
+    color:#4f4a4a;
     
 }
 
@@ -1009,7 +1019,7 @@ form {
 
 .input-box > input:focus,
 .input-box > textarea:focus {
-    border-bottom:3px solid crimson;
+    border-bottom:3px solid rgb(23, 22, 22);
     animation: shake .2s;
 }
 
@@ -1037,14 +1047,14 @@ form {
 }
 
 .input-box > input:focus ~ i {
-    color:crimson;
+    color:rgb(23, 22, 22);
 }
 
 form > button {
     width: 100%;
     padding: 10px;
     outline: none;
-    background: crimson;
+    background: rgb(23, 22, 22);
     color:#fff;
     border:none;
     transition: .1s;
@@ -1054,7 +1064,7 @@ form > button {
 
 form > button:hover,
 .links > a:hover {
-    background: rgb(172, 16, 47);
+    background: rgb(23, 22, 22);
 }
 
 @keyframes shake { 
@@ -1084,8 +1094,6 @@ form > button:hover,
 .grid-prueba {
     display: none;
 }
-
-
 
 .h4-proy {
     display: flex;
@@ -1409,6 +1417,16 @@ form > button:hover,
         text-align: center;
     }
 
+    .section6 {
+        margin: 0;
+        padding-top: 10%;
+    }
+
+    .fondo-footer {
+        height: 60%;
+        object-fit: cover;
+    }
+
 }
 
 @media screen and (max-width:700px) {
@@ -1649,7 +1667,7 @@ form > button:hover,
     }
 
     .section6 {
-        padding: 0;
+        padding-top: 10%;
         display: flex;
         flex-direction: column;
     }
@@ -1671,7 +1689,7 @@ form > button:hover,
 
 }
 
-@media screen and (max-width:550px) {
+@media screen and (max-width:600px) {
     html{
         padding: 0;
         margin: 0;
@@ -1685,8 +1703,13 @@ form > button:hover,
     }
 
     .section {
+        padding-top: 30%;
         background-size: cover;
         border-radius: 0;
+    }
+
+    .section2 {
+        padding-top: 30%;
     }
 
     #image-carousel img{
@@ -1696,9 +1719,18 @@ form > button:hover,
     .id-habilidad img{
         max-width: 1.2rem;
     }
+
+    .section6 {
+        padding-top: 20%;
+    }
+
+    .fondo-footer {
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
-@media screen and (max-width:450px){
+@media screen and (max-width:500px){
 
     .section {
         padding-top: 25%;
@@ -1711,7 +1743,7 @@ form > button:hover,
     }
 
     .section2{
-        padding-top: 40%;
+        padding-top: 30%;
     }
 
     
@@ -1756,12 +1788,20 @@ form > button:hover,
 }
 
 @media screen and (max-width:400px) {
+    .section2 {
+        padding-top: 40%;
+    }
+
     .img-habilidades img {
         width: .75rem;
     }
 }
 
 @media screen and (max-width:365px){
+
+    .section2 {
+        padding-top: 50%;
+    }
     .img-habilidades img {
         width: .5rem;
     }
