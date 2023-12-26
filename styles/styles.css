@@ -32,6 +32,18 @@
 
 }
 
+.dark-mode .container .box-info h1{
+    color: white;
+}
+
+.dark-mode .container .box-info p {
+    color: white;
+}
+
+.dark-mode .container .box-info i{
+    color: white;
+}
+
 .list-menu{
     display: none;
 }
@@ -207,6 +219,10 @@ img.info-foto{
 h1.animated-text {
     font-weight: 600;
     font-size: 3rem;
+}
+
+.dark-mode .h3h3-sobremi{
+    background-color: #cccccc52;
 }
 
 .h3h3-sobremi{
@@ -573,6 +589,9 @@ h1.animated-text {
     margin-top: 10px;
 }
 
+.dark-mode .habilidades{
+    background-color: #cccccc52;
+}
 
 .habilidades{
     display: flex;
@@ -655,6 +674,10 @@ img.id-habiL {
     margin: 0;
     padding: 2rem 0 0 0;
     max-width: 100%;
+}
+
+.dark-mode .educacion {
+    background-color: #cccccc52;
 }
 
 .educacion {
@@ -820,6 +843,10 @@ img.id-habiL {
     max-width: 100%;
 }
 
+.dark-mode .proyectos {
+    background-color: #cccccc52;
+}
+
 .proyectos {
     display: flex;
     width: 22rem;
@@ -913,8 +940,8 @@ img.id-habiL {
 
 .fondo-footer {
     position: absolute;
-    z-index: -1;
-    opacity: .2;
+    z-index: -111;
+    opacity: .1;
     width: 100%;
 }
 
@@ -925,7 +952,7 @@ img.id-habiL {
 .container {
     display:grid;
     grid-template-columns: repeat(2,50%);
-    padding:20px;
+    padding:50px 0 20px 0;
     gap:10px;
     width: 1000px;
     align-items: center;
@@ -950,7 +977,8 @@ img.id-habiL {
     gap:25px
 }
 
-.data > p {
+.data p {
+    color: black;
     font-size: 1rem;
 }
 
@@ -1104,12 +1132,30 @@ form > button:hover,
     padding-bottom: 2rem;
 
 }
+
 .proy-media{
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     gap: 2rem;
+}
+
+.dark-mode .grid-proyectos h4{
+    color: white;
+    text-decoration: none; 
+
+}
+
+.grid-proyectos h4 {
+    color: black ;
+    text-decoration: none; 
+}
+
+.dark-mode .proy-media-query ul a{
+    color: white;
+    box-shadow: 0 5px 15px -5px rgba(235, 228, 228, 0.5);
+
 }
 
 .proy-media-query ul a {
