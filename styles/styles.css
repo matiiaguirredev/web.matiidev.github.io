@@ -4,6 +4,24 @@
     margin: 0;
 }
 
+.dark-mode {
+    background-color: #000;
+    color: white;
+}
+
+.dark-mode i.bi{
+    color: white;
+}
+
+.dark-mode .item4 img{
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    border: 0 solid transparent;
+    background-image: linear-gradient(90deg, rgba(246, 236, 236, 0.331), rgba(193, 183, 183, 0.35));
+    border-radius: 5px;
+}
+
 .list-menu{
     display: none;
 }
@@ -25,7 +43,6 @@
     background-color: transparent;
     align-items: center;
     text-align: center;
-    z-index: 1;
     border-bottom: 3px solid #bbb;
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
@@ -51,13 +68,15 @@
 
 a {
     text-decoration: none;
-    color: black;
 }
 
 .nav-bar a {
     text-decoration: none;
-    color: black;
 
+}
+
+.nav-bar a:visited {
+    color: inherit;
 }
 
 
@@ -88,7 +107,7 @@ ul {
     padding-top: 10%;
     flex-wrap: wrap;
     padding-bottom: 10%;
-    background-image: url("/img/lenguajeprogramacion.png");
+    background-image: url("/img/15616101.png");
     background-repeat: no-repeat;
     background-size: 100%;
     margin-bottom: 5%;
@@ -462,11 +481,7 @@ h1.animated-text {
 .section3{
     padding: 3rem 0 0 0;
     margin: 0;
-    background-image: url("/img/gifhabili.gif");
-    background-repeat: no-repeat;
-    background-position:  right bottom; 
-    background-size: 35%;
-    z-index: -5;
+    
     
 }
 
@@ -1368,7 +1383,12 @@ form > button:hover,
 
 }
 
-@media screen and (max-width:650px) {
+@media screen and (max-width:680px) {
+
+
+    .open-menu {
+        border: none;
+    }
 
     aside{
         display: none;
@@ -1411,7 +1431,7 @@ form > button:hover,
     }
 
     .menu-responsive button i{
-        position:fixed;
+        position: fixed;
         font-size: 3rem;
         z-index: 101;
         padding: 0;

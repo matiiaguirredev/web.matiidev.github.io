@@ -327,7 +327,7 @@ setInterval(rotateCarouselInternos, 3500);
  */
 
 
-/* ////////////////////////////////////////////////// */
+/* /////////////// MENU RESPONSIVE ///////////////// */
 
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -354,3 +354,24 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+
+/* ///////////// DARK MODE ////////////////// */
+
+const noche = document.querySelector(".bi-moon-fill");
+
+noche.addEventListener("click", function() {
+    const body = document.body;
+
+    body.classList.toggle("dark-mode");
+    
+});
+
+const noche2 = document.querySelector(".bi-moon-stars-fill")
+
+noche2.addEventListener("click", function(){
+    const body = document.body;
+
+    body.classList.toggle("dark-mode");
+})
+
