@@ -123,19 +123,19 @@ exampleCarousel.startRotation(5000); // Cambia el intervalo a tu preferencia (en
 /* ///////////////////// CARRUSEL DE HABILIDADES ! //////////////////////// */
 
 const images = [
-    'img/php.png',
-    'img/laravel.png',
-    'img/python.png',
-    'img/mysql.png',
-    'img/html.png',
-    'img/css.png',
-    'img/sass.png',
-    'img/javascript.png',
-    'img/react.png',
-    'img/github.png',
-    'img/bootstrap.png',
-    'img/figma.png',
-    'img/figma.png',
+    '/img/php.png',
+    '/img/laravel.png',
+    '/img/python.png',
+    '/img/mysql.png',
+    '/img/html.png',
+    '/img/css.png',
+    '/img/sass.png',
+    '/img/javascript.png',
+    '/img/react.png',
+    '/img/github.png',
+    '/img/bootstrap.png',
+    '/img/figma.png',
+    '/img/figma.png',
 ];
 
 const imageCarousel = document.getElementById('image-carousel');
