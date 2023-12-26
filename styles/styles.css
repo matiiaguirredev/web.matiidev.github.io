@@ -22,7 +22,10 @@
     border-radius: 5px;
 }
 
+.dark-mode .nav-bar ul li a:visited {
+    color: white;
 
+}
 
 .list-menu{
     display: none;
@@ -70,15 +73,18 @@
 
 a {
     text-decoration: none;
+
 }
 
-.nav-bar a {
+.nav-bar ul li a {
     text-decoration: none;
 
+
 }
 
-.nav-bar a:visited {
-    color: inherit;
+.nav-bar ul li a:visited {
+    color: black;
+
 }
 
 
