@@ -364,7 +364,7 @@ noche.addEventListener("click", function() {
     const body = document.body;
 
     body.classList.toggle("dark-mode");
-    
+
 });
 
 const noche2 = document.querySelector(".bi-moon-stars-fill")
@@ -373,5 +373,18 @@ noche2.addEventListener("click", function(){
     const body = document.body;
 
     body.classList.toggle("dark-mode");
+
+    if (body.classList.contains("dark-mode")) {
+        body.style.transition = "2s linear";
+    } else {
+        body.style.transition = "2s linear";
+        setTimeout(() => {
+            body.style.transition = "2s linear";
+        }, );
+    }
 })
+
+/* /////////////      //////////////// */
+
+
 

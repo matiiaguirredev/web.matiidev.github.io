@@ -8,6 +8,7 @@
     font-size: .9rem;
 }
 
+
 .dark-mode .grid-item .fondo-blanco-obligado {
     background-color: white;
 }
@@ -21,6 +22,7 @@ h3 {
 }
 
 .dark-mode {
+    /* transition: 2s linear;   LO MANDO POR JS DIRECTO.*/
     background-color: #000;
     color: white;
 }
@@ -39,6 +41,7 @@ h3 {
 }
 
 .dark-mode .menu {
+    transition: 2s linear;
     background: black;
 }
 
@@ -1803,6 +1806,15 @@ form > button:hover,
 }
 
 @media screen and (max-width:500px){
+    .list-menu ul li{
+        font-size: 1.5rem;
+
+    }
+
+    .list-menu ul {
+        padding: 12rem 0;
+        height: 100%;
+    }
 
     .section {
         padding-top: 25%;
@@ -1817,8 +1829,6 @@ form > button:hover,
     .section2{
         padding-top: 30%;
     }
-
-    
 
     #image-carousel img{
         max-width: 25%;
@@ -1861,9 +1871,6 @@ form > button:hover,
 
 @media screen and (max-width:400px) {
 
-    .list-menu ul {
-        height: 100%;
-    }
     
     .section2 {
         padding-top: 40%;
@@ -1875,6 +1882,16 @@ form > button:hover,
 }
 
 @media screen and (max-width:365px){
+
+    .list-menu ul li{
+        font-size: 2rem;
+    }
+
+    .list-menu ul {
+        padding: 10rem 0;
+
+    }
+
 
     .foto-inicio {
         padding-right: 10%;
@@ -1888,4 +1905,6 @@ form > button:hover,
         width: .5rem;
     }
 }
+
+
 
