@@ -118,7 +118,7 @@ class Carousel {
 
 const exampleCarousel = new Carousel(galleryContainer, galleryItems, galleryControls);
 /* exampleCarousel.setControls(); */ // estos son los botones, por el momentos los elimino.
-exampleCarousel.startRotation(5000); // Cambia el intervalo a tu preferencia (en milisegundos)
+exampleCarousel.startRotation(5000); 
 
 /* ///////////////////// CARRUSEL DE HABILIDADES ! //////////////////////// */
 
@@ -365,6 +365,15 @@ noche.addEventListener("click", function() {
 
     body.classList.toggle("dark-mode");
 
+    if (body.classList.contains("dark-mode")) {
+        body.style.transition = "2s linear";
+    } else {
+        body.style.transition = "2s linear";
+        setTimeout(() => {
+            body.style.transition = "2s linear";
+        }, );
+    }
+
 });
 
 const noche2 = document.querySelector(".bi-moon-stars-fill")
@@ -384,7 +393,7 @@ noche2.addEventListener("click", function(){
     }
 })
 
-/* /////////////      //////////////// */
+/* /////////////     //////////////// */
 
 
 
