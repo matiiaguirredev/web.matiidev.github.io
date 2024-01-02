@@ -1815,13 +1815,16 @@ form>button:hover,
         width: 80%;
     }
 
-    .fondo-footer {
-        padding: 5rem 0 0 0;
-    }
+    
 
 }
 
 @media screen and (max-width:600px) {
+
+    .foto-fondo {
+        height: 80%;
+        padding: 0 0 3rem 0;
+    }
 
     .list-menu ul li {
         font-size: 2rem;
@@ -1862,12 +1865,14 @@ form>button:hover,
     }
 
     .fondo-footer {
-        height: 100%;
-        object-fit: cover;
+        height: 110%;
+        padding: 0;
     }
 }
 
 @media screen and (max-width:500px) {
+
+
     .list-menu ul li {
         font-size: 1.5rem;
 
@@ -1883,9 +1888,7 @@ form>button:hover,
     }
 
     .foto-fondo {
-        height: 55%;
-        object-fit: cover;
-
+        margin-bottom: 13rem;
     }
 
     .section2 {
@@ -1929,17 +1932,31 @@ form>button:hover,
         gap: 1rem;
     }
 
+    .section6 {
+        padding: 8rem 0 0 0;
+    }
+
+    .fondo-footer {
+        height: 100%;
+        padding: 0;
+    }
+
 }
 
 @media screen and (max-width:400px) {
 
 
     .section2 {
-        padding-top: 40%;
+        padding-top: 10%;
     }
 
     .img-habilidades img {
         width: .75rem;
+    }
+
+    .fondo-footer {
+        height: 110%;
+        padding: 0;
     }
 }
 
@@ -1954,18 +1971,22 @@ form>button:hover,
 
     }
 
-
     .foto-inicio {
         padding-right: 10%;
         width: 45%;
     }
 
     .section2 {
-        padding-top: 50%;
+        padding-top: 25%;
     }
 
     .img-habilidades img {
         width: .5rem;
+    }
+
+    .fondo-footer {
+        height: 110%;
+        padding: 0;
     }
 }
 
