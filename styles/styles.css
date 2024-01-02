@@ -1199,6 +1199,10 @@ form>button:hover,
 
 }
 
+.proy-media-query {
+    display: none;
+}
+
 .proy-media-query ul a {
     background: linear-gradient(to right, #d5d4da);
     box-shadow: 0 5px 15px -5px rgba(0, 0, 0, 0.5);
@@ -1249,6 +1253,10 @@ form>button:hover,
 
     .grid-container {
         padding: 0;
+    }
+
+    .proy-media-query {
+        display: none;
     }
 
 
@@ -1470,6 +1478,10 @@ form>button:hover,
 
     }
 
+    .proy-media-query {
+        display: block;
+    }
+
 
     .proy-media {
         display: flex;
@@ -1507,8 +1519,7 @@ form>button:hover,
     }
 
     .fondo-footer {
-        height: 65%;
-        object-fit: cover;
+        padding: 2rem 0 0 0;
     }
 
 }
@@ -1571,6 +1582,10 @@ form>button:hover,
         100% {
             right: 0%;
         }
+    }
+
+    .list-menu ul li {
+        font-size: 2.5rem;
     }
 
     .list-menu ul a {
@@ -1800,9 +1815,18 @@ form>button:hover,
         width: 80%;
     }
 
+    .fondo-footer {
+        padding: 5rem 0 0 0;
+    }
+
 }
 
 @media screen and (max-width:600px) {
+
+    .list-menu ul li {
+        font-size: 2rem;
+
+    }
     html {
         padding: 0;
         margin: 0;
@@ -1838,7 +1862,7 @@ form>button:hover,
     }
 
     .fondo-footer {
-        height: 120%;
+        height: 100%;
         object-fit: cover;
     }
 }
@@ -2008,6 +2032,7 @@ li a.btn-5 {
     color: black;
 }
 
+
 li a.btn-5:hover {
     background: transparent;
     box-shadow: none;
@@ -2028,6 +2053,7 @@ li a.btn-5:after {
         4px 4px 5px 0px #0002;
     transition: 400ms ease all;
 }
+
 
 li a.btn-5:after {
     right: inherit;

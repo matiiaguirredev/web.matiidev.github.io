@@ -337,6 +337,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     openMenu.addEventListener('click', function() {
         aside.classList.toggle('list-menu');
+
     });
 
     // Agregar event listener al documento para cerrar el menú al hacer clic fuera de él
