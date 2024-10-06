@@ -358,7 +358,13 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 /* ///////////// DARK MODE ////////////////// */
-
+/**
+ * Añade un event listener al elemento con la clase ".bi-moon-fill" para alternar entre el modo oscuro y claro del cuerpo del documento.
+ * 
+ * Cuando el elemento ".bi-moon-fill" es clickeado, esta función toggla la clase "dark-mode" en el cuerpo del documento para activar o desactivar el modo oscuro.
+ * Además, ajusta la transición del cuerpo del documento para que sea más suave al cambiar entre el modo oscuro y claro.
+ * 
+ */
 const noche = document.querySelector(".bi-moon-fill");
 
 noche.addEventListener("click", function() {
@@ -377,6 +383,8 @@ noche.addEventListener("click", function() {
 
 });
 
+
+// esta es para el rresponsive que no funcionaba
 const noche2 = document.querySelector(".bi-moon-stars-fill")
 
 noche2.addEventListener("click", function(){
@@ -395,6 +403,4 @@ noche2.addEventListener("click", function(){
 })
 
 /* /////////////     //////////////// */
-
-
 
